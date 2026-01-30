@@ -1,72 +1,31 @@
-# eTugon
-
-eTugon is a mobile application designed to empower citizens to report community issues quickly and effectively. The name "eTugon" combines "e" (electronic) and "Tugon" (response), signifying a fast and digital response to community concerns.
-
-## Features
-
-*   **User Authentication:** Secure login and registration system.
-*   **Report Submission:** Users can submit reports with details such as title, description, category, location, and images.
-*   **Report Categories:** Categorize reports into Crime & Safety, Health & Sanitation, Traffic & Infrastructure, Environment & Disasters, Community Concerns, and Others.
-*   **Image Upload:** Attach photos to reports (simulated in the current version).
-*   **Location Tracking:** Specify the location of the issue.
-*   **Anonymous Reporting:** Option to submit reports anonymously.
-*   **Report Feed:** View a feed of public reports and track the status of your own submissions.
-*   **Filtering and Sorting:** Filter reports by status and sort by date, name, or upvotes.
-*   **Upvoting System:** Upvote reports to highlight important issues.
-*   **User Profile:** View user statistics, recent activity, and manage account settings.
-
-## Tech Stack
-
-*   **Frontend:** React Native with Expo
-*   **Navigation:** Expo Router
-*   **Styling:** StyleSheet, Expo Linear Gradient
-*   **Icons:** Expo Vector Icons (FontAwesome)
-*   **Backend (Intended):** FastAPI (referenced in API calls)
-
-## Project Structure
-
-The project follows a standard Expo structure with file-based routing:
-
-*   `app/`: Contains the main application screens and routing logic.
-    *   `index.tsx`: The landing/home screen.
-    *   `explore.tsx`: The login screen.
-    *   `register.tsx`: The user registration screen.
-    *   `blank.tsx`: The main feed displaying reports.
-    *   `create_report.tsx`: The form for submitting new reports.
-    *   `new_blank.tsx`: The user profile screen.
-    *   `report[1-4].tsx`: Detail views for specific reports.
-*   `components/`: Reusable UI components.
-*   `assets/`: Images and other static assets.
-
-## Getting Started
-
-1.  **Prerequisites:**
-    *   Node.js and npm installed.
-    *   Expo CLI installed.
-
-2.  **Installation:**
-    ```bash
-    npm install
-    ```
-
-3.  **Running the App:**
-    ```bash
-    npx expo start
-    ```
-    Use the Expo Go app on your Android or iOS device to scan the QR code, or run on an emulator.
-
-## API Configuration
-
-The application is currently configured to communicate with a backend server at `http://10.10.19.221:8087`. Ensure your backend server is running and accessible at this address, or update the API endpoints in the following files:
-
-*   `app/explore.tsx` (Login)
-*   `app/register.tsx` (Signup)
-*   `app/create_report.tsx` (Create Report)
-
-## Contributing
-
-Contributions are welcome! Please follow the standard pull request process.
-
-## License
-
-[MIT License](LICENSE)
+{
+  "name": "etugon",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~50.0.14",
+    "expo-constants": "~15.4.5",
+    "expo-linear-gradient": "~12.7.2",
+    "expo-linking": "~6.2.2",
+    "expo-router": "~3.4.8",
+    "expo-status-bar": "~1.11.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.73.6",
+    "react-native-safe-area-context": "4.8.2",
+    "react-native-screens": "~3.29.0",
+    "react-native-web": "~0.19.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.2.45",
+    "typescript": "^5.1.3"
+  },
+  "private": true
+}
